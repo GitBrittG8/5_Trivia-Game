@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Birds of Minnesota Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="assets/javascript/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+</head>
+
+<!-- Start screen on Display
+User clicks start
+Shows time remaining under header
+When user tries to hit two answers, selected dot switches over
+When timer hits 0, display number of questions that were correct, incorrect, and unanswered.
+
+-->
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-8">
+                <div class="wrapper">
+
+                    <div class="jumbotron">
+                        <h1>Birds of Minnesota<br>Identification Trivia!</h1>
+                    </div>
+
+                    <div class="row" id="button-row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                        <button type="button" class="btn btn-primary" id="start-button">Start</button>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row"> 
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+ 
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="survey" id="Radios1" value="Yes">
+                                Bald Eagle
+                            </label>
+                            </div>
+                            
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="survey" id="Radios2" value="No">
+                                Golden Eagle
+                            </label>
+                            </div>
+                            
+                            <div class="radio disabled">
+                            <label>
+                                <input type="radio" name="survey" id="Radios3" value="Notsure" disabled>
+                                Red-Tailed Hawk
+                            </label>
+                            </div>
+ 
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/goldenEagle.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/mallardM.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/woodDuckM.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/mallardF.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/turkeyM.jpg"/>
+                        </div>     
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/woodDuckF.jpg"/>
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+
+                    <div class="row" id="id-row">
+                        <div class="col-sm-7">
+                            <p>Which bird am I?</p>
+                        </div>
+                        <div class="col-sm-1">
+                            <img src="assets/images/baldEagle.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="row" id="empty-row">
+                        <div class="col-sm-8"></div>
+                    </div>
+
+                    <div class="row" id="footer">
+                        <div class="col-sm-10">
+                            <p>copyright</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

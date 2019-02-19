@@ -1,0 +1,47 @@
+* {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 20px;
+}
+
+body {
+    background-color: #438D80;
+}
+
+.wrapper {
+    background:rgba(255,255,255,0.1);
+}
+
+.jumbotron {
+    height: 300px;
+}
+
+.jumbotron, #footer {
+    background-image:url(../images/balsam_fir.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color: #9dc183;
+    color:#ffff;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+#id-row, #empty-row, #button-row {
+    height:200px;
+}
+
+#id-row, #button-row {
+    background:rgba(255,255,255,0.6);
+}
+
+h1 {
+    line-height: 70px;
+    font-weight:bold;
+}
+
+h1, #footer {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
