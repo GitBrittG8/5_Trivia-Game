@@ -29,6 +29,18 @@ make sure you reset game instead of reload page.
             <p>Which tree am I?</p>
         </div>
 
+        <p>Click the button to create a Radio Button.</p>
+
+            <button onclick="myFunction()">Try it</button>
+
+            <script>
+            function myFunction() {
+            var x = document.createElement("INPUT");
+            x.setAttribute("type", "radio");
+            document.body.appendChild(x);
+            }
+            </script>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
