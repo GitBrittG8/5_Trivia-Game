@@ -29,11 +29,19 @@ body {
 }
 
 #id-row, #empty-row, #button-row {
-    height:200px;
+    height:300px;
 }
 
 #id-row, #button-row {
     background:rgba(255,255,255,0.6);
+}
+
+.inset {
+    border-style:inset;
+    border-color: #9dc183;
+    border-width: 15px;
+    width: 300px;
+    height: auto;
 }
 
 h1 {
