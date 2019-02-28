@@ -34,6 +34,11 @@ body {
 
 #id-row, #button-row {
     background:rgba(255,255,255,0.6);
+    padding: 25px;
+}
+
+.clearfix {
+    overflow:auto;
 }
 
 .inset {
