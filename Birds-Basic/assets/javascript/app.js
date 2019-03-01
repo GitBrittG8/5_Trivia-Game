@@ -1,26 +1,36 @@
-var userChoice = document.getElementById("idOption")
-var amountCorrect = 0;
-var amountWrong = 0;
+    //Variables
+
+    var amountCorrect = 0;
+    var amountWrong = 0;
+    var amountMissed = 0;
+    var answers = [1,1,1,1,1,1,1];
+    var question = [];
 
 
 
-// When timer runs out, run grade function
-function gradesAnswers () {
-    if (idOption.value === true) {
-        amountCorrect ++;
-    } else {
-        amountWrong ++;
+    //Functions
+
+    function grade() {
+
+        for (var i = 0; i < answers.length; i++) {
+            var radios = document.getElementsByName('Q'+ i +'-Option');
+
+            for (var j = 0; j < radios.length; j++) {
+
+                if (radios[j].checked) {
+                    if (radios[j].value == answers[i]) {
+                    amountCorrect ++;
+                    $('#stats').text('Correct: ' + amountCorrect);
+                    console.log("Question " + i + " is correct!");
+                    }
+
+                    else {
+                    amountWrong ++;
+                    $('#stats').text('Wrong: ' + amountWrong);
+                    console.log("Question " + i + " is incorrect!");
+                    }
+                    break;
+                }
+            }
+        }
     }
-    console.log("Correct: " + amountCorrect + " Missed: " + amountWrong);
-    // Display scores to div
-}
-
-//Create Start Button to display on load... Hide Trivia Questions
-
-// When Start Button clicked, Hide button... Display Trivia Questions... Timer Countdown
-
-
-// Assign correct id to each pic
-
-
-// Randomize with each refresh
