@@ -27,7 +27,7 @@ function start() {
 
 function decrement() {
     time--;
-    $("#timer-row").html(time);
+    $("#timer-row").html("<p> Time left:   " + time + "</p>");
     if (time === 0) {
         grade();
         alert("Time Up!");
