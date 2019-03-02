@@ -1,36 +1,70 @@
-    //Variables
+//VARIABLES
 
-    var amountCorrect = 0;
-    var amountWrong = 0;
-    var amountMissed = 0;
-    var answers = [1,1,1,1,1,1,1];
-    var question = [];
+$(document).ready(function() {
+
+var amountCorrect = 0;
+var amountWrong = 0;
+var amountMissed = 0;
+var answers = [1,1,1,1,1,1,1];
+var question = [];
+var time = 30;
+var intervalId;
 
 
+//FUNCTIONS
+$(document).on("click", "#start-button", function(event){
+    start()
+});
 
-    //Functions
+$("#grade-button").on("click", grade());
 
-    function grade() {
 
-        for (var i = 0; i < answers.length; i++) {
-            var radios = document.getElementsByName('Q'+ i +'-Option');
+function start() {
+    console.log("start") 
+    clearInterval(intervalId);          
+    intervalId = setInterval(decrement, 1000);  
+}
 
-            for (var j = 0; j < radios.length; j++) {
+function decrement() {
+    time--;
+    $("#timer-row").html(time);
+    if (time === 0) {
+        grade();
+        alert("Time Up!");
+    }
+}
 
-                if (radios[j].checked) {
-                    if (radios[j].value == answers[i]) {
+
+//when Grade Button clicked... 
+function grade() {
+    clearInterval(intervalId);
+
+    for (var i = 0; i < answers.length; i++) {                  //Compare user guesses with Answer Array
+        var radios = document.getElementsByName('Q'+ i +'-Option');
+
+        for (var j = 0; j < radios.length; j++) {               //Tally Score and place numbers in stats area
+            if (radios[j].checked) {
+                if (radios[j].value == answers[i]) {
                     amountCorrect ++;
-                    $('#stats').text('Correct: ' + amountCorrect);
-                    console.log("Question " + i + " is correct!");
-                    }
-
-                    else {
+                    $('#amountCorrect-stats').text('Correct: ' + amountCorrect);
+                    console.log("Question " + i + " correct");
+                
+                } if (radios[j].value != answers[i]) {
                     amountWrong ++;
-                    $('#stats').text('Wrong: ' + amountWrong);
-                    console.log("Question " + i + " is incorrect!");
-                    }
-                    break;
+                    $('#amountWrong-stats').text('Wrong: ' + amountWrong);
+                    console.log("Question " + i + " wrong");
+
+                } else {
+                    amountMissed ++;
+                    $('#amountMissed-stats').text('Missed: ' + amountWrong);
+                    console.log("Question " + i + " missed");
                 }
+                break;
             }
         }
     }
+}
+
+// start();
+
+})

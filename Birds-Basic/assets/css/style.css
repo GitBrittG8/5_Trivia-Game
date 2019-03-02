@@ -28,13 +28,20 @@ body {
     1px 1px 0 #000;  
 }
 
-#id-row, #empty-row, #button-row {
+#id-row {
     height:300px;
 }
 
+#empty-row, #button-row  {
+    height:200px;
+}
+
 #id-row, #button-row {
-    background:rgba(255,255,255,0.6);
     padding: 25px;
+}
+
+#id-row, #timer-row {
+    background:rgba(255,255,255,0.6);
 }
 
 .clearfix {
