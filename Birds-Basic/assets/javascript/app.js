@@ -6,7 +6,6 @@ var amountCorrect = 0;
 var amountWrong = 0;
 var amountMissed = 0;
 var answers = [1,1,1,1,1,1,1];
-var question = [];
 var time = 30;
 var intervalId;
 
@@ -64,7 +63,4 @@ function grade() {
         }
     }
 }
-
-// start();
-
 })
