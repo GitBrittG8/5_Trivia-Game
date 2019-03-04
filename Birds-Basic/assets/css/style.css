@@ -32,10 +32,6 @@ body {
     height:300px;
 }
 
-#timer-row {
-    padding: 50px;
-}
-
 #empty-row, #button-row  {
     height:200px;
 }
